@@ -31,7 +31,7 @@
 #include "forwards.h"
 #include "poll_set.h"
 #include "common.h"
-#include "publisher.h"
+
 #include <ros/time.h>
 #include "ros/subscription_callback_helper.h"
 #include <map>
@@ -85,10 +85,7 @@ private:
 
   // frequency to publish statistics
   double pub_frequency_;
-
-  // publisher for statistics data
-  ros::Publisher pub_;
-
+  
   struct StatData {
     // last time, we published /statistics data
     ros::Time last_publish;
